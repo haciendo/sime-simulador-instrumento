@@ -18,8 +18,8 @@ var onDeviceReady = function() {
     
 	vx.conectarPorWebSockets({
 		url: "https://backend-sime.herokuapp.com"
-	});
-	
+		//url: "http://localhost:3000"
+	});	
 	
 	
 	$('#enviarMedicion').on('click', function(){
@@ -27,7 +27,7 @@ var onDeviceReady = function() {
 		vx.send({
 			tipoDeMensaje: 'medicionCruda',
 			idAdaptador: 1,
-			valorMedicion: $('#enviarMedicion').val()
+			valorMedicion: $('#valorMedicion').val()
 		});
 		
 	});
