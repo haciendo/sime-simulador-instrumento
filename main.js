@@ -17,10 +17,9 @@ var onDeviceReady = function() {
 	vx.start({verbose:true});
     
 	vx.conectarPorWebSockets({
-		url: "https://backend-sime.herokuapp.com"
+		url: "http://sime-backend.herokuapp.com"
 		//url: "http://localhost:3000"
 	});	
-	
 	
 	$('#enviarMedicion').on('click', function(){
 		console.log('e paso?');
