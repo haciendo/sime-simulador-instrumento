@@ -14,24 +14,16 @@ $(document).ready(function() {
 
 var onDeviceReady = function() {
     
-	vx.start({verbose:true});
-    
-	vx.conectarPorWebSockets({
-		url: "http://sime-backend.herokuapp.com"
-		//url: "http://localhost:3000"
-	});	
+	Vx.conectarCon(new NodoConectorSocket('https://sime-backend.herokuapp.com'));
 	
 	$('#enviarMedicion').on('click', function(){
 		console.log('e paso?');
-		vx.send({
+		Vx.send({
 			tipoDeMensaje: 'medicionCruda',
 			idAdaptador: 1,
 			valorMedicion: $('#valorMedicion').val()
-		});
-		
-	});
-	
-	
+		});		
+	});	
 	
 	if(window.plugin){
 		window.plugin.backgroundMode.enable();
