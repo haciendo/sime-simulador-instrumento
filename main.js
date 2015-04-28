@@ -21,7 +21,7 @@ var onDeviceReady = function() {
 		Vx.send({
 			tipoDeMensaje: 'medicionCruda',
 			idAdaptador: 1,
-			valorMedicion: $('#valorMedicion').val()
+			valorCrudo: $('#valorMedicion').val()
 		});		
 	});	
 	
