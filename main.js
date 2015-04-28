@@ -15,6 +15,7 @@ $(document).ready(function() {
 var onDeviceReady = function() {
     
 	Vx.conectarCon(new NodoConectorSocket('https://sime-backend.herokuapp.com'));
+	//Vx.conectarCon(new NodoConectorSocket("http://localhost:3000"));
 	
 	$('#enviarMedicion').on('click', function(){
 		console.log('e paso?');
